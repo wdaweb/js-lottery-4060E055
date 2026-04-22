@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+
+        const rand = (min, max) => {
+            let num = Math.floor(Math.random() * (max - min) + 1) + min
+            return num;
+        }
+
+        let output_num = [rand(1, 38)]
+
+
+        let A_num = 0
+        do {
+            A_num = rand(1, 38)
+            if (!output_num.includes(A_num)) {
+                output_num.push(A_num)
+            }
+
+
+        } while (output_num.length < 6)
+
+        document.writeln("A區", output_num, "<br>")
+        document.writeln("B區", rand(1, 8))
+    </script>
+</body>
+
+</html>
